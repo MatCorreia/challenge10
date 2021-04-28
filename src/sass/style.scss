@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+//* Global *//
+* {
+    padding: 0;
+    margin: 0;
+}
+
+//* Colors *//
+
+//Primary
+
+$limeGreen: hsl(163, 72%, 41%);
+$brightRed: hsl(356, 69%, 56%);
+
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: hsl(329, 70%, 58%);
+$youTube: hsl(348, 97%, 39%);
+
+/*** Dark Theme ***/
+
+$toggleDark: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+//*** Light Theme ***//
+
+$toggleLight: hsl(230, 53%, 92%);
+$toggleLight2: hsl(231, 23%, 84%);
+
+//Neutral
+
+//*** Dark Theme ***//
+
+$veryDarkBlue: hsl(230, 17%, 14%);
+$veryDarkBlueTop: hsl(232, 19%, 15%);
+$darkDesaturatedBlue: hsl(228, 28%, 20%);
+$desaturatedBlue: hsl(231, 23%, 40%);
+$white: hsl(0, 0%, 100%);
+
+//*** Light Theme ***//
+
+$white: hsl(0, 0%, 100%);
+$veryPaleBlueTop: hsl(225, 100%, 98%);
+$lightGrayishBlue: hsl(228, 72%, 90%);
+$darkGrayishBlue: hsl(228, 12%, 44%);
+$veryDarkBlue: hsl(230, 17%, 14%);
+
+//* Layout Dark Mode *//
+body {
+    &.dark-mode {
+        background-color: $veryDarkBlue;
+        color: $white;
+        transition: 0.3s;
+        z-index: 1;
+        & .card-social,
+          .card-overview {
+            background-color: $darkDesaturatedBlue;
+            &:hover {
+                background-color: $desaturatedBlue;
+                cursor: pointer;
+            }
+        }
+        & .toggle {
+            background: $toggleDark;
+        }
+    }
+}
+
+//* Layout Light Mode*//
+body {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    background-color: $white;
+    transition: 0.3s;
+}
+
+
+.container {
+    height: 100vh;
+}
+
+.tittle-social {
+    & h3 {
+        font-weight: 800;
+    }
+    & p {
+        font-weight: 600;
+        opacity: 0.7;
+    }
+}
+
+.text-dark-mode {
+    & h5 {
+        font-size: 1em;
+        font-weight: 600;
+        opacity: 0.7;
+        margin: auto;
+    }
+}
+
+.toggle {
+    display: flex;
+    min-width: 60px;
+    height: 30px;
+    border-radius: 34px;
+    background-color: $toggleLight2;
+}
+
+.test input {
+    display: none;
+}
+
+.test span {
+    width: 20px;
+    height: 20px;
+    background-color: $darkDesaturatedBlue;
+    border-radius: 50%;
+    margin: auto 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.test input:checked + span {
+    background-color: $white;
+    margin-left: auto;
+}
+
+.tittle-overview {
+    font-weight: 800;
+    opacity: 0.7;
+}
+
+.card-social,
+.card-overview {
+    border: none;
+    background-color: $white;
+    padding: 25px 30px 15px 30px;
+    margin: 0 0 25px 0;
+    border-radius: 5px;
+    &:hover {
+        border-radius: 5px;
+        background-color: $toggleLight;
+        cursor: pointer;
+    }
+    & h4 {
+        font-weight: 800;
+    }
+}
+
+#social-facebook {
+    border-top: 5px solid $facebook;
+    border-radius: 5px;
+} 
+
+#social-twitter {
+    border-top: 5px solid $twitter;
+    border-radius: 5px;
+}
+
+#social-instagram {
+    border-top: 5px solid $instagram;
+    border-radius: 5px;
+}
+
+#social-youtube {
+    border-top: 5px solid $youTube;
+    border-radius: 5px;
+} 
+
+.follow {
+    letter-spacing: 0.3em;
+}
+
+.increase {
+    color: $limeGreen;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.decrease {
+    color: $brightRed;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+   
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    & a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+@media (max-width: 1200px) {
+    .text-dark-mode {
+        & h5 {
+            margin: auto 10px auto 0;
+        }
+    }
+    
+    .toggle {
+        margin-left: auto;
+    }
+};

@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0; }
+
+/*** Dark Theme ***/
+body.dark-mode {
+  background-color: #1e202a;
+  color: white;
+  transition: 0.3s;
+  z-index: 1; }
+  body.dark-mode .card-social,
+  body.dark-mode .card-overview {
+    background-color: #252a41; }
+    body.dark-mode .card-social:hover,
+    body.dark-mode .card-overview:hover {
+      background-color: #4f567d;
+      cursor: pointer; }
+  body.dark-mode .toggle {
+    background: linear-gradient(90deg, #378fe6, #3eda82); }
+
+body {
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  transition: 0.3s; }
+
+.container {
+  height: 100vh; }
+
+.tittle-social h3 {
+  font-weight: 800; }
+.tittle-social p {
+  font-weight: 600;
+  opacity: 0.7; }
+
+.text-dark-mode h5 {
+  font-size: 1em;
+  font-weight: 600;
+  opacity: 0.7;
+  margin: auto; }
+
+.toggle {
+  display: flex;
+  min-width: 60px;
+  height: 30px;
+  border-radius: 34px;
+  background-color: #cdd0e0; }
+
+.test input {
+  display: none; }
+
+.test span {
+  width: 20px;
+  height: 20px;
+  background-color: #252a41;
+  border-radius: 50%;
+  margin: auto 5px;
+  cursor: pointer;
+  transition: 0.3s; }
+
+.test input:checked + span {
+  background-color: white;
+  margin-left: auto; }
+
+.tittle-overview {
+  font-weight: 800;
+  opacity: 0.7; }
+
+.card-social,
+.card-overview {
+  border: none;
+  background-color: white;
+  padding: 25px 30px 15px 30px;
+  margin: 0 0 25px 0;
+  border-radius: 5px; }
+  .card-social:hover,
+  .card-overview:hover {
+    border-radius: 5px;
+    background-color: #e0e3f5;
+    cursor: pointer; }
+  .card-social h4,
+  .card-overview h4 {
+    font-weight: 800; }
+
+#social-facebook {
+  border-top: 5px solid #198ff5;
+  border-radius: 5px; }
+
+#social-twitter {
+  border-top: 5px solid #1ca0f2;
+  border-radius: 5px; }
+
+#social-instagram {
+  border-top: 5px solid #df4996;
+  border-radius: 5px; }
+
+#social-youtube {
+  border-top: 5px solid #c4032a;
+  border-radius: 5px; }
+
+.follow {
+  letter-spacing: 0.3em; }
+
+.increase {
+  color: #1db489;
+  font-weight: 600;
+  font-size: 0.9em; }
+
+.decrease {
+  color: #dc414c;
+  font-weight: 600;
+  font-size: 0.9em; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+  .attribution a {
+    color: #3e52a3; }
+
+@media (max-width: 1200px) {
+  .text-dark-mode h5 {
+    margin: auto 10px auto 0; }
+
+  .toggle {
+    margin-left: auto; } }
+
+/*# sourceMappingURL=style.css.map */
